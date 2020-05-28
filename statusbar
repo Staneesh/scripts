@@ -1,6 +1,8 @@
 #!/bin/sh
 
+delim="|"
+
 while :; do
-	xsetroot -name "$(battery && echo "$delim" && hour | tr '\n' ' ')"
+	xsetroot -name "$(battery && echo $delim && hour | tr '\n' ' ')"
 	sleep 10s
 done
