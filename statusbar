@@ -1,7 +1,21 @@
 #!/bin/sh
 
+disk_usage()
+{
+	printf ": %s root, %s home | " $(rootfull) $(homefull) 
+}
+
+battery_left()
+{
+	printf ": %s |" $(battery)
+}
+
+current_time()
+{
+	printf ": %s " $(hour)
+}
 
 while :; do
-	xsetroot -name "$(battery && hour | tr '\n' ' ')"
+	xsetroot -name "$(disk_usage && battery_left && current_time | tr '\n' ' ')"
 	sleep 10s
 done
