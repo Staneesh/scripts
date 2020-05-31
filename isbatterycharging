@@ -1,0 +1,10 @@
+#!/bin/sh
+
+battery_status=$(acpi | awk '{print $3}' | sed 's/,//' | tr '\n' ' ') 
+
+if [ $battery_status = "Charging" ]
+then 
+	echo "Yes"
+else
+	echo "No"
+fi

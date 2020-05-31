@@ -7,7 +7,12 @@ disk_usage()
 
 battery_left()
 {
-	printf ": %s | " $(battery)
+	emoji=
+	if [ $(isbatterycharging) = "Yes" ]
+	then
+		emoji=
+	fi
+	printf "$emoji: %s | " $(battery)
 }
 
 current_time()
