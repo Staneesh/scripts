@@ -7,7 +7,7 @@ disk_usage()
 
 battery_left()
 {
-	printf ": %s |" $(battery)
+	printf ": %s | " $(battery)
 }
 
 current_time()
