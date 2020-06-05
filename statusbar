@@ -20,7 +20,19 @@ current_time()
 	printf ": %s " $(hour)
 }
 
+cpu_usage()
+{
+	emoji=ﰌ
+	usage=$(cpuusage)
+	if [ bc <<< "$usage > 50" = "1" ]
+	then
+		emoji=省
+	fi
+	
+	printf "$emoji: %.1f | " $usage 
+}
+
 while :; do
-	xsetroot -name "$(disk_usage && battery_left && current_time | tr '\n' ' ')"
+	xsetroot -name "$(cpu_usage && disk_usage && battery_left && current_time | tr '\n' ' ')"
 	sleep 10s
 done
