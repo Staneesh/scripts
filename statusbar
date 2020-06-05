@@ -32,7 +32,13 @@ cpu_usage()
 	printf "$emoji: %.1f | " $usage 
 }
 
+ram_usage()
+{
+	usage=$(bc <<< "$(ramusage) * 100")
+	printf "ﴬ: %.2f | " $usage
+}
+
 while :; do
-	xsetroot -name "$(cpu_usage && disk_usage && battery_left && current_time | tr '\n' ' ')"
-	sleep 10s
+	xsetroot -name "$(ram_usage && cpu_usage && disk_usage && battery_left && current_time | tr '\n' ' ')"
+	sleep 1s
 done

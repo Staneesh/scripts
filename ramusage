@@ -1,0 +1,4 @@
+#!/bin/sh
+ 
+top -bn1 | awk 'NR==4 {print $8, $4}' | sed "s/ /\//" | bc -l
+
