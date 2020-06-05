@@ -29,13 +29,13 @@ cpu_usage()
 		emoji=省
 	fi
 	
-	printf "$emoji: %.1f | " $usage 
+	printf "$emoji: %.1f%% | " $usage 
 }
 
 ram_usage()
 {
 	usage=$(bc <<< "$(ramusage) * 100")
-	printf "ﴬ: %.2f | " $usage
+	printf "ﴬ: %.2f%% | " $usage
 }
 
 while :; do
