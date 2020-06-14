@@ -12,7 +12,7 @@ battery_left()
 	then
 		emoji=
 	fi
-	printf "$emoji: %s | " $(battery)
+	printf "$emoji: %s, %s | " $(battery) $(batterytemp)
 }
 
 current_time()
