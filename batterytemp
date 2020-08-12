@@ -6,8 +6,11 @@ next=0
 sensors |
 while IFS= read -r line;do
 	if [ $next -eq 1 ]; then
-		echo "$line" | awk '{print $2}'
-		break
+		first=$(echo "$line" | awk '{print $1}')
+		if [ "$first" == "temp1:" ]; then
+			echo "$line" | awk '{print $2}'
+			break
+		fi
 	fi
 	if [[ "$line" == *"$sub"* ]]; then
 		next=1
