@@ -1,4 +1,17 @@
 #!/bin/sh
- 
-sensors | awk 'NR==8 {print $2}'
+
+sub='ACPI interface'
+next=0
+
+sensors |
+while IFS= read -r line;do
+	if [ $next -eq 1 ]; then
+		echo "$line" | awk '{print $2}'
+		break
+	fi
+	if [[ "$line" == *"$sub"* ]]; then
+		next=1
+	fi
+done 
+
 
