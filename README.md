@@ -16,7 +16,7 @@ Screen:
 
 ---
 
-Bar:
+Taskbar:
 
 ![Image link broken.](https://github.com/Staneesh/scripts/blob/master/bar.png)
 
