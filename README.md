@@ -16,7 +16,7 @@ Screen:
 
 ---
 
-Taskbar:
+Taskbar closeup:
 
 ![Image link broken.](https://github.com/Staneesh/scripts/blob/master/bar.png)
 
