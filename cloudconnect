@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cloud_ip="192.168.0.2"
+
+ssh blk@$cloud_ip
