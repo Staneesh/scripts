@@ -1,2 +1,2 @@
-df -h | awk 'NR==4 {print $5}'
+df / | awk 'NR==2 {print $5}'
 

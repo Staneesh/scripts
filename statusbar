@@ -39,6 +39,6 @@ ram_usage()
 }
 
 while :; do
-	xsetroot -name "$(ram_usage && cpu_usage && disk_usage && battery_left && current_time | tr '\n' ' ')"
+	xsetroot -name "$(ram_usage && cpu_usage && disk_usage && current_time | tr '\n' ' ')"
 	sleep 1s
 done
