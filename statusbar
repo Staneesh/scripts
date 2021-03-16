@@ -38,7 +38,12 @@ ram_usage()
 	printf "ﴬ: %.2f%% | " $usage
 }
 
+weather_now()
+{
+	printf ": %s | " $(weather)
+}
+
 while :; do
-	xsetroot -name "$(ram_usage && cpu_usage && disk_usage && current_time | tr '\n' ' ')"
+	xsetroot -name "$(weather_now && ram_usage && cpu_usage && disk_usage && current_time | tr '\n' ' ')"
 	sleep 1s
 done

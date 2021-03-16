@@ -2,4 +2,4 @@
 
 random_image=$(ls ~/wallpapers | shuf | awk NR==1)
 
-xwallpaper --stretch ~/wallpapers/"$random_image"
+xwallpaper --zoom ~/wallpapers/"$random_image"

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+curl --silent wttr.in/Warsaw?format=3 | awk '{print $3}'
+

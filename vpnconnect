@@ -1,5 +1,3 @@
 #!/bin/sh
 
-cat ~/vpn_credentials && 
-
-sudo openvpn --config /etc/openvpn/pl-waw.prod.surfshark.com_udp.ovpn --daemon
+sudo openvpn --config /etc/openvpn/pl-waw.prod.surfshark.com_udp.ovpn --daemon --auth-user-pass ~/vpn_credentials
