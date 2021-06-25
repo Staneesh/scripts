@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Works on PC
+amixer -c 0 set Headphone unmute 100% > /dev/null
+

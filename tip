@@ -1,0 +1,4 @@
+#!/bin/bash
+
+st -e sh -c 'cd ~/programming/tip; cargo run'
+

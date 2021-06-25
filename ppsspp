@@ -1,0 +1,6 @@
+#!/bin/sh
+
+flatpak run org.ppsspp.PPSSPP
+
+
+

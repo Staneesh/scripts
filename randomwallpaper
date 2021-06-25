@@ -1,5 +1,5 @@
 #!/bin/sh
-
-random_image=$(ls ~/wallpapers | shuf | awk NR==1)
+random_image="$(ls ~/wallpapers | shuf | awk NR==1)" 
 
 xwallpaper --zoom ~/wallpapers/"$random_image"
+
